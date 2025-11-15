@@ -6,3 +6,4 @@
 - [ ] Data on Railway PostgreSQL
 - [ ] Deploy to Railway
 - [ ] Fast response https://www.youtube.com/watch?v=1nk-BEo5WAY
+- [ ] Run on 100% bun
