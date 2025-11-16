@@ -1,75 +1,42 @@
-# Nuxt Minimal Starter
+# Nuxt Multi Tenant Example
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+[Demo](https://psytest.pt)
 
-## Setup
+## Getting Started
 
-Make sure to install dependencies:
+1. Environment variables
+
+Add environment variables in `.env.local` or `.env`
+
+2. Install Dependencies
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
 bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+3. Run
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+bun dev
 ```
 
-## Production
+## Tech Stack
 
-Build the application for production:
+We use [Nuxt-Multi-Tenancy](https://github.com/hieuhani/nuxt-multi-tenancy) module.
 
-```bash
-# npm
-npm run build
+## Deploy
 
-# pnpm
-pnpm build
+To deploy on Vercel:
 
-# yarn
-yarn build
+1. Add Upstash Redis in Storage Settings
 
-# bun
-bun run build
+2. Add `BASE_URL` in Vercel environment varibles
+
+3. Add custom domain in Vercel (including wildcard one)
+
+```
+<your-domain-name>.com
+*.<your-domain-name>.com
 ```
 
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+4. Change `multiTenancy.rootDomains` option in `nuxt.config.ts` to include your custom domain.
