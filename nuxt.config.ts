@@ -16,7 +16,14 @@ export default defineNuxtConfig({
     storage: {
       redis: {
         driver: process.env.NODE_ENV === "production" ? "vercelKV" : "memory",
-        url: process.env.REDIS_URL,
+        url:
+          process.env.NODE_ENV === "production"
+            ? process.env.KV_REST_API_URL
+            : process.env.REDIS_URL,
+        token:
+          process.env.NODE_ENV === "production"
+            ? process.env.KV_REST_API_TOKEN
+            : undefined,
       },
     },
   },
