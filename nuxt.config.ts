@@ -10,7 +10,7 @@ export default defineNuxtConfig({
   modules: ["shadcn-nuxt", "nuxt-multi-tenancy"],
   multiTenancy: {
     tenantDynamicRoute: "tenant",
-    rootDomains: ["localhost:3000"],
+    rootDomains: ["psytest.pt", "localhost:3000"],
   },
   nitro: {
     storage: {
