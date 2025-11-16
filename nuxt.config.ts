@@ -15,7 +15,7 @@ export default defineNuxtConfig({
   nitro: {
     storage: {
       redis: {
-        driver: process.env.NODE_ENV === "production" ? "redis" : "memory",
+        driver: process.env.NODE_ENV === "production" ? "vercelKV" : "memory",
         url: process.env.REDIS_URL,
       },
     },
